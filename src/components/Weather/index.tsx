@@ -59,7 +59,11 @@ const Weather: React.FC = () => {
           <DateLabel>{moment().format('LL')}</DateLabel>
           <Container flexDirection="column">
             <MainIcon
-              src={weather[`${data?.current.weather[0].main}`] || weather.foog}
+              src={
+                weather[
+                  `${data?.current.weather[0].main.toLocaleLowerCase()}`
+                ] || weather.foog
+              }
               alt="Main Icon"
             />
             <DateLabel>{data?.current.weather[0].main}</DateLabel>
