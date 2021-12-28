@@ -15,6 +15,10 @@ export const Wrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(2px);
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const Container = styled(WeatherContainer)`
@@ -63,20 +67,36 @@ export const Text = styled(WeatherText)`
 
 export const Header = styled(Text)`
   font-size: 50px;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 `;
 
 export const CurrentTemp = styled(Text)`
   font-size: 140px;
   font-weight: 200;
+
+  @media (max-width: 375px) {
+    font-size: 100px;
+  }
 `;
 
 export const Label = styled(Text)`
   font-size: 35px;
+
+  @media (max-width: 375px) {
+    font-size: 30px;
+  }
 `;
 
 export const DateLabel = styled(Text)`
   font-size: 18px;
   text-transform: uppercase;
+
+  @media (max-width: 375px) {
+    font-size: 16px;
+  }
 `;
 
 export const Icons = styled.img`
@@ -88,6 +108,11 @@ export const MainIcon = styled.img`
   margin: 1rem 0;
   width: 100px;
   height: 100px;
+
+  @media (max-width: 320px) {
+    width: 70px;
+    height: 70px;
+  }
 `;
 
 export const Line = styled.div`
