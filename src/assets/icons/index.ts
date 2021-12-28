@@ -7,3 +7,4 @@ export { default as snow } from './snow.png';
 export { default as foog } from './foog.png';
 export { default as moon } from './moon.png';
 export { default as clear } from './clear.png';
+export { default as no_data } from './no_data.png';

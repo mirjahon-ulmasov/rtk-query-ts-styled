@@ -24,7 +24,26 @@ export const Container = styled(WeatherContainer)`
   flex-direction: ${props => props.flexDirection || 'row'};
   justify-content: ${props => props.justifyContent || 'center'};
   background-color: ${props => props.backgroundColor || 'transparent'};
-  overflow: ${props => props.overflow || 'none'};
+  overflow-x: ${props => props.overflow || 'none'};
+
+  &::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 20px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+  }
 `;
 
 export const WeatherDiv = styled(Container)`
@@ -74,4 +93,14 @@ export const MainIcon = styled.img`
 export const Line = styled.div`
   width: 100%;
   border: 1px solid #fff;
+`;
+
+export const ErrorText = styled.span`
+  width: 100%;
+  color: #ccc;
+  font-weight: 300;
+  font-size: 40px;
+  margin-top: 2rem;
+  text-align: center;
+  text-transform: uppercase;
 `;

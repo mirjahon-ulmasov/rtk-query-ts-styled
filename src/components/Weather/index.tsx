@@ -11,6 +11,7 @@ import {
   Header,
   Line,
   WeatherDiv,
+  ErrorText,
 } from './WeatherStyle';
 import * as weather from '../../assets/icons';
 import { useFetchWeatherQuery } from '../../services/WeatherService';
@@ -145,6 +146,7 @@ const Weather: React.FC = () => {
                 </WeatherDiv>
               );
             })}
+          {period === 'details' && <ErrorText>No data Found</ErrorText>}
         </Container>
       </Container>
     </Wrapper>
