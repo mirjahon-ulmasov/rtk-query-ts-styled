@@ -1,5 +1,5 @@
 ### Weather app
-https://weather-mirjahon.netlify.app/weather
+https://weather-mirjahon.netlify.app
 
 ## Available Scripts
 
